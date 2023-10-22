@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+
+    <!-- 路由的出口 -->
+  <router-view></router-view>
+
+    <van-tabbar route>
+  <van-tabbar-item icon="home-o" to="/article">面经</van-tabbar-item>
+  <van-tabbar-item icon="star-o" to="/collect">收藏</van-tabbar-item>
+  <van-tabbar-item icon="friends-o" to="/community">广场</van-tabbar-item>
+  <van-tabbar-item icon="setting-o" to="/user">我的</van-tabbar-item>
+</van-tabbar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less" scoped>
+
 </style>
